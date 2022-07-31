@@ -120,7 +120,6 @@ void intr_click_handler(void* args)
         {
             if(!gpio_get_level(_keypad_pins[j]))
             {
-                ets_printf("vendo %d \n", j);
                 xQueueSendFromISR(keypad_queue, &keypad[index*4 + j - 4], NULL);
                 break;
             }
