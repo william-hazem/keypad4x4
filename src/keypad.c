@@ -109,7 +109,6 @@ void intr_click_handler(void* args)
 {
     int index = (int)(args);
     
-
     time_t time_now_isr = time(NULL);
     time_t time_isr = (time_now_isr - time_old_isr)*1000L;
     
@@ -145,6 +144,6 @@ void keypad_delete()
     {   
         gpio_isr_handler_remove(_keypad_pins[i]);
         gpio_set_direction(_keypad_pins[i], GPIO_MODE_DISABLE);
-        vQueueDelete(keypad_queue);
     }
+    vQueueDelete(keypad_queue);
 }
