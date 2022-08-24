@@ -10,3 +10,9 @@ Inside your project library dir, run:
 ```
 git submodule add https://github.com/william-hazem/keypad4x4
 ```
+
+or 
+
+```
+git clone https://github.com/william-hazem/keypad4x4
+```
