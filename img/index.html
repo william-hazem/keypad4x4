@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keypad</title>
+    <style>
+        * {
+           font-family: Arial, Helvetica, sans-serif; 
+        }
+        .container {
+            display: block;
+            position: absolute;
+            background-color: #2D333B;
+        }
+        .center {
+            margin: 0 auto;
+        }
+        .keypad {
+            display: inline-block;
+            background-color:  #202020;
+            padding: 10px;
+            border-radius: 5%;
+            outline: white solid 3px;
+            outline-offset: -9px;
+        }
+        .row {
+            font-weight: 500;
+            font-size: 4rem;
+            margin: 7px;
+        }
+
+        .row span {
+            display: inline-block;
+            text-align: center;
+            color: white;
+            background-color: #1e59da;
+            border: 2px white solid;
+            border-radius: 11%;
+            width: 70px;
+            height: 70px;
+        }
+
+        .row span:last-child {
+            background-color: red;
+        }
+
+        .row:last-child span:nth-child(2n + 1)
+        {
+            background-color: red;
+        }
+
+        label {
+            font-size: 1rem;
+            position: relative;
+            top: 35px;
+            height: 100%;
+            color: #fff;
+            margin: 0;
+            float: left;
+            overflow: hidden;
+            display: inline;
+        }
+        .connections {
+            background-color: #2D333B;
+            padding-bottom: 20px;
+            color: white;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .connections .con{
+            
+            display: inline-block;
+            margin: 0 0.01rem;
+            width: 15px;
+            height: 70px;
+            background-color: #202020;
+        }
+        .con::after {
+            display: block;
+            position: relative;
+            bottom: -37px;
+            left: 0;
+            background-color: white;
+            border: 0 solid white;
+            border-top: 00.01rem;
+            content: '';
+            z-index: 3;
+            width: 5px;
+            height: 10px;
+            margin: 1px auto 0 auto;
+
+        }
+        .con span {
+            position: relative;
+            top: 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container center">
+        <div class="keypad">
+            <div class="row r-1">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>A</span>
+            </div>
+            
+            <div class="row r-2">
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>B</span>
+            </div>
+            <div class="row r-3">
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>C</span>
+            </div>
+            <div class="row r-4">
+                <span>*</span>
+                <span>0</span>
+                <span>#</span>
+                <span>D</span>
+            </div>
+        </div>
+        <div class="connections">
+            <span class="con"><span>R1</span></span>
+            <span class="con"><span>R2</span></span>
+            <span class="con"><span>R3</span></span>
+            <span class="con"><span>R4</span></span>
+            <span class="con"><span>C1</span></span>
+            <span class="con"><span>C2</span></span>
+            <span class="con"><span>C3</span></span>
+            <span class="con"><span>C4</span></span>
+            
+        </div>
+    </div>
+</body>
+</html>
